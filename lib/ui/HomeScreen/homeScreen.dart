@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:islami/ui/HomeScreen/BotoomNvITem.dart';
 import 'package:islami/ui/theam/Theam.dart';
 
-import 'Taps/HadethTap.dart';
+import 'Taps/Quran_tap/Hadeth_tap/HadethTap.dart';
 import 'Taps/Quran_tap/QuranTap.dart';
 import 'Taps/RadioTap.dart';
 import 'Taps/TaspehTap.dart';
