@@ -45,7 +45,8 @@ class QuranTap extends StatelessWidget{
         ),
         Expanded(
           flex: 2,
-          child: ListView.separated(itemBuilder:(context, index) =>
+          child: ListView.separated(
+            itemBuilder:(context, index) =>
               ChapterTitel(Chapters[index],versesNumber[index].toString(),index),
             itemCount: Chapters.length,
             separatorBuilder: (context, index) => Divider(
