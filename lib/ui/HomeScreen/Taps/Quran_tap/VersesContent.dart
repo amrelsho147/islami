@@ -18,11 +18,13 @@ class VersesContent extends StatelessWidget{
             child: Text('$Content {${index+1}}',
                 textDirection:TextDirection.rtl,
                 textAlign: TextAlign.center
-                ,style: TextStyle(fontSize: 18,)),
+                ,style:Theme.of(context).textTheme.bodyLarge),
           ),
           Container(
             width: 2,
-            color: MyTheamData.lightPrimary,
+
+            color:
+            MyTheamData.lightPrimary,
 
           ),
         ],

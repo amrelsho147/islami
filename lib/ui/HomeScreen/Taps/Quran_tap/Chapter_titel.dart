@@ -22,7 +22,7 @@ class ChapterTitel extends StatelessWidget{
             children: [
             Expanded(
               child: Text(titel,textAlign: TextAlign.center
-              ,style: TextStyle(fontSize: 18,)),
+              ,style: Theme.of(context).textTheme.bodyMedium),
             ),
               Container(
                 width: 2,
@@ -30,7 +30,7 @@ class ChapterTitel extends StatelessWidget{
 
               ),
               Expanded(child: Text( textAlign: TextAlign.center,
-                  NumOfverses,style: TextStyle(fontSize: 18,)))
+                  NumOfverses,style:  Theme.of(context).textTheme.bodyMedium))
             ],
           ),
         )
