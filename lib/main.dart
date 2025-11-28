@@ -32,6 +32,8 @@ class MyApp extends StatelessWidget {
         supportedLocales: AppLocalizations.supportedLocales,
       locale: Locale('ar'),
 
+
+
     );
   }
 }

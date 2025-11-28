@@ -29,7 +29,6 @@ class _HomeScreenState extends State<HomeScreen> {
         height: double.infinity,width: double.infinity,),
     Scaffold(
     appBar: AppBar(title: Text(AppLocalizations.of(context)!.appTitle,style:  Theme.of(context).textTheme.bodyMedium,),),
-    appBar: AppBar(title: Text('Islami',style: Theme.of(context).textTheme.bodyMedium,),),
       body: taps[selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         onTap: (index) {
