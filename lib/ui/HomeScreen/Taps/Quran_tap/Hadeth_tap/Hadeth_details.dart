@@ -11,12 +11,14 @@ class HadethDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Hadeth hadeth =ModalRoute.of(context)?.settings.arguments as Hadeth;
+    bool isdark =MyTheamData.isDark;
     return  Stack(
         children: [
-          Image.asset('assets/images/homescreen.jpg',fit: BoxFit.fill,
+          Image.asset(isdark?'assets/images/home_dark_background.png':
+            'assets/images/homescreen.jpg',fit: BoxFit.fill,
             height: double.infinity,width: double.infinity,),
           Scaffold(
-            appBar: AppBar(title: Text(hadeth.title,style: TextStyle(fontSize: 18,color:Colors.black),),),
+            appBar: AppBar(title: Text(hadeth.title,style: TextStyle(fontSize: 18,),),),
             body:Card(
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
               margin: EdgeInsets.symmetric(vertical: 50,horizontal: 24),

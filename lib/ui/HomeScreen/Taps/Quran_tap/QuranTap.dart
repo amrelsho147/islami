@@ -22,13 +22,16 @@ class QuranTap extends StatelessWidget{
   ];
   @override
   Widget build(BuildContext context) {
+    bool isdark = MyTheamData.isDark;
     return Column(
       children: [
       Expanded(
         flex: 1,
           child: Image.asset('assets/images/quran_header.png')),
         Container(
-        color: MyTheamData.lightPrimary,
+        color: isdark? MyTheamData.darkSecondary:
+        MyTheamData.lightPrimary,
+
           height: 3,
           width: double.infinity,
 
@@ -36,10 +39,12 @@ class QuranTap extends StatelessWidget{
         Padding(
           padding: EdgeInsetsGeometry.symmetric(vertical: .8),
           child: Text(AppLocalizations.of(context)!.chapterTitle
-          ,style: TextStyle(fontSize: 25,fontWeight: FontWeight.w500),),
+          ,style: Theme.of(context).textTheme.titleMedium,),
         ),
         Container(
-          color:MyTheamData.lightPrimary,
+          color:isdark? MyTheamData.darkSecondary:
+          MyTheamData.lightPrimary,
+
           height: 3,
           width: double.infinity,
 
@@ -54,7 +59,9 @@ class QuranTap extends StatelessWidget{
               height: 0,
               endIndent: 30,
               indent: 30,
-              color: MyTheamData.lightPrimary,
+              color: isdark? MyTheamData.darkSecondary:
+              MyTheamData.lightPrimary,
+
             ),
 
 
