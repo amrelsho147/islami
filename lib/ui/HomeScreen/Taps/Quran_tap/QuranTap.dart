@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:islami/l10n/app_localizations.dart';
 import 'package:islami/ui/HomeScreen/Taps/Quran_tap/Chapter_titel.dart';
 import 'package:islami/ui/theam/Theam.dart';
 
@@ -34,7 +35,7 @@ class QuranTap extends StatelessWidget{
         ),
         Padding(
           padding: EdgeInsetsGeometry.symmetric(vertical: .8),
-          child: Text('Chapter Title'
+          child: Text(AppLocalizations.of(context)!.chapterTitle
           ,style: TextStyle(fontSize: 25,fontWeight: FontWeight.w500),),
         ),
         Container(
@@ -45,7 +46,8 @@ class QuranTap extends StatelessWidget{
         ),
         Expanded(
           flex: 2,
-          child: ListView.separated(itemBuilder:(context, index) =>
+          child: ListView.separated(
+            itemBuilder:(context, index) =>
               ChapterTitel(Chapters[index],versesNumber[index].toString(),index),
             itemCount: Chapters.length,
             separatorBuilder: (context, index) => Divider(
