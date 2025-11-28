@@ -4,7 +4,7 @@ class MyTheamData{
   static final Color lightPrimary = Color(0xffB7935f);
   static final Color darkPrimary = Color(0xff141A2E);
   static final Color darkSecondary = Color(0xffFACC1D);
-static const bool isDark =false;
+static const bool isDark =true;
 
   static final ThemeData darkTheam = ThemeData(
     textTheme: TextTheme(
