@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:islami/ui/HomeScreen/BotoomNvITem.dart';
 import 'package:islami/ui/theam/Theam.dart';
 
+import '../../l10n/app_localizations.dart';
 import 'Taps/Quran_tap/Hadeth_tap/HadethTap.dart';
 import 'Taps/Quran_tap/QuranTap.dart';
 import 'Taps/RadioTap.dart';
@@ -27,7 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
     'assets/images/homescreen.jpg',fit: BoxFit.fill,
         height: double.infinity,width: double.infinity,),
     Scaffold(
-    appBar: AppBar(title: Text('Islami',style: Theme.of(context).textTheme.bodyMedium,),),
+    appBar: AppBar(title: Text(AppLocalizations.of(context)!.appTitle,style:  Theme.of(context).textTheme.bodyMedium,),),
       body: taps[selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         onTap: (index) {
@@ -38,10 +39,10 @@ class _HomeScreenState extends State<HomeScreen> {
         },
         currentIndex:selectedIndex  ,
         items: [
-        bottomNavItem('quarn', 'assets/images/moshaf_gold.png',Theme.of(context).primaryColor),
-        bottomNavItem( 'headeth','assets/images/icon_hadeth.png',Theme.of(context).primaryColor),
-        bottomNavItem('tasbehh','assets/images/sebha.png',Theme.of(context).primaryColor),
-        bottomNavItem('radio','assets/images/radio.png' ,Theme.of(context).primaryColor),
+        bottomNavItem(AppLocalizations.of(context)!.quranTab, 'assets/images/moshaf_gold.png',Theme.of(context).primaryColor),
+        bottomNavItem( AppLocalizations.of(context)!.hadethTab,'assets/images/icon_hadeth.png',Theme.of(context).primaryColor),
+        bottomNavItem(AppLocalizations.of(context)!.tasbehTab,'assets/images/sebha.png',Theme.of(context).primaryColor),
+        bottomNavItem(AppLocalizations.of(context)!.radioTab,'assets/images/radio.png' ,Theme.of(context).primaryColor),
     ],
 
     ),

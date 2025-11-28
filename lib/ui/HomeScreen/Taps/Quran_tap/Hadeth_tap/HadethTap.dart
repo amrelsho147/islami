@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:islami/l10n/app_localizations.dart';
 import 'package:islami/ui/HomeScreen/Taps/Quran_tap/Hadeth_tap/Hadeth_titel.dart';
 
 import '../../../../theam/Theam.dart';
@@ -34,7 +35,7 @@ class _HadethTapState extends State<HadethTap> {
         ),
         Padding(
           padding: EdgeInsetsGeometry.symmetric(vertical: .8),
-          child: Text('Hadeth Title'
+          child: Text(AppLocalizations.of(context)!.hadethNum
             ,style: TextStyle(fontSize: 25,fontWeight: FontWeight.w500),),
         ),
         Container(

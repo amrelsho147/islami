@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:islami/l10n/app_localizations.dart';
 import 'package:islami/ui/HomeScreen/Taps/Quran_tap/Chapter_titel.dart';
 import 'package:islami/ui/theam/Theam.dart';
 
@@ -37,7 +38,7 @@ class QuranTap extends StatelessWidget{
         ),
         Padding(
           padding: EdgeInsetsGeometry.symmetric(vertical: .8),
-          child: Text('Chapter Title'
+          child: Text(AppLocalizations.of(context)!.chapterTitle
           ,style: Theme.of(context).textTheme.titleMedium,),
         ),
         Container(
