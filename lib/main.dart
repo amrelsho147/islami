@@ -4,7 +4,8 @@ import 'package:islami/ui/HomeScreen/Taps/Quran_tap/Hadeth_tap/Hadeth_details.da
 import 'package:islami/ui/HomeScreen/homeScreen.dart';
 import 'package:islami/ui/SplashScreen/splash_Screen.dart';
 import 'package:islami/ui/theam/Theam.dart';
-
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'l10n/app_localizations.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -23,11 +24,10 @@ class MyApp extends StatelessWidget {
         HomeScreen.routeName  : (_)=>HomeScreen(),
         ChapterDetails.routeName : (_)=> ChapterDetails(),
        HadethDetails.routeName  : (_)=> HadethDetails(),
-
-
-
-    }
-
+    },
+        localizationsDelegates: AppLocalizations.localizationsDelegates,
+        supportedLocales: AppLocalizations.supportedLocales,
+      locale: Locale('ar'),
 
     );
   }
