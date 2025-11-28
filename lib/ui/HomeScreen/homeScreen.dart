@@ -20,12 +20,14 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    bool isdark =MyTheamData.isDark;
     return Stack(
       children: [
-        Image.asset('assets/images/homescreen.jpg',fit: BoxFit.fill,
+        Image.asset(isdark? 'assets/images/home_dark_background.png':
+    'assets/images/homescreen.jpg',fit: BoxFit.fill,
         height: double.infinity,width: double.infinity,),
     Scaffold(
-    appBar: AppBar(title: Text('Islami',style: TextStyle(color:Colors.black),),),
+    appBar: AppBar(title: Text('Islami',style: Theme.of(context).textTheme.bodyMedium,),),
       body: taps[selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         onTap: (index) {
@@ -36,10 +38,10 @@ class _HomeScreenState extends State<HomeScreen> {
         },
         currentIndex:selectedIndex  ,
         items: [
-        bottomNavItem('quarn', 'assets/images/moshaf_gold.png'),
-        bottomNavItem( 'headeth','assets/images/icon_hadeth.png'),
-        bottomNavItem('tasbehh','assets/images/sebha.png'),
-        bottomNavItem('radio','assets/images/radio.png' ),
+        bottomNavItem('quarn', 'assets/images/moshaf_gold.png',Theme.of(context).primaryColor),
+        bottomNavItem( 'headeth','assets/images/icon_hadeth.png',Theme.of(context).primaryColor),
+        bottomNavItem('tasbehh','assets/images/sebha.png',Theme.of(context).primaryColor),
+        bottomNavItem('radio','assets/images/radio.png' ,Theme.of(context).primaryColor),
     ],
 
     ),
